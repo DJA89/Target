@@ -1,0 +1,83 @@
+.left {
+  background-color: white;
+  display: block;
+  min-height: 100%;
+  overflow: auto;
+  text-align: center;
+  width: 50%;
+}
+
+.right {
+  background-color: #2fbcf7;
+  height: 100%;
+  overflow: scroll;
+  overflow: overlay;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.target-example {
+  text-align: center;
+}
+
+.target-example-photo {
+  max-height: 800px;
+  min-width: 320px;
+  width: 48%;
+}
+
+.app-store {
+  flex-grow: 2;
+  max-height: 51px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.app-store-logo {
+  min-width: 118.5px;
+  text-align: center;
+  width: 18%;
+}
+
+.facebook-twitter {
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.twitter { text-align: start; }
+
+.twitter-logo { margin-left: 1rem; }
+
+.facebook { text-align: end; }
+
+.facebook-logo { margin-right: 1rem; }
+
+.bottom-logo {
+  max-height: 45px;
+  min-width: 25px;
+  padding-top: 1rem;
+  width: 4%;
+}
+
+@media screen and (max-width: 840px) {
+  .right {
+    bottom: 0;
+    left: 0;
+    min-height:837px;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .left { width: 100%; }
+}

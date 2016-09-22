@@ -1,0 +1,27 @@
+<section>
+  <div class="friends"></div>
+  <h1 class="title">TARGET MVD</h1>
+  <h2 class="slogan">Find people near you &amp; Connect</h2>
+  <p class="main-text"> Create a target wherever on the map, specify your interest: Travel, Dating, Music, etc and start connecting with others who share your interest.</p>
+  <div class="form-container">
+    <form name="signInForm" ng-submit="signInForm.$valid && SignInCtrl.logInUser()" novalidate>
+      <label for="email" class="email-label form-label" ng-hide="(signInForm.$submitted || signInForm.email.$touched) && (signInForm.email.$error.required || signInForm.email.$error.email)">email</label>
+      <label for="email" class="email-label error form-label" ng-show="(signInForm.$submitted || signInForm.email.$touched) && signInForm.email.$error.required">email is required</label>
+      <label for="email" class="email-label error form-label" ng-show="(signInForm.$submitted || signInForm.email.$touched) && signInForm.email.$error.email">email is invalid</label>
+      <input type="email" name="email" ng-model="SignInCtrl.user.email" class="sign-in-input" overwrite-email required/>
+      <label for="password" class="form-label" ng-hide="(signInForm.$submitted || signInForm.password.$touched) && signInForm.password.$error.required">password</label>
+      <label for="password" class="error form-label" ng-show="(signInForm.$submitted || signInForm.password.$touched) && signInForm.password.$error.required">password is required</label>
+      <input type="password" name="password" ng-model="SignInCtrl.user.password" class="sign-in-input" required/>
+      <input type="submit" value="Sign in" class="sign-in" />
+      <div ng-show="signInForm.$submitted">
+        <div class="form-label error" ng-show="SignInCtrl.badRequest">Wrong email or password.</div>
+      </div>
+      <p class="forgot-password"><a href="#">Forgot your password?</a></p>
+    </form>
+    <div class="options">
+      <h3><a class="connect-with-facebook" herf="#">CONNECT WITH FACEBOOK</a></h3>
+      <div class="line"></div>
+      <h4 class="sign-up"><a href="/sign_up">Sign up</a></h4>
+    </div>
+  </div>
+</section>

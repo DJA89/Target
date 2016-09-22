@@ -10,154 +10,17 @@ body {
   display: flex;
 }
 
-.menu {
-
-}
-
-/*.right {
-  width: 50%;
-  height: 100%;
-  position: fixed;
-  background-color: #2fbcf7;
-  right: 0;
-  top: 0;
-}*/
-
-/*.logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: row;
-}
-
-.target-example {
-  width: 40%;
-  margin: auto;
-  order: 1;
-}
-
-.target-example::after {
-  content: '';
-  width: 100%;
-}
-
-.facebook-twitter {
-  display: flex;
-  justify-content: center;
-  align-content: space-around;
-  order: 3;
-}
-
-.app-store-logo {
-  margin: auto;
-  order: 2;
-}
-
-.facebook-logo {
-  margin-left: 1em;
-}
-
-.twitter-logo {
-  margin-right: 1em;
-}
-*/
-
 .app-container {
-  display: flex;
-  flex-wrap: wrap;
+/*  display: flex;
+  flex-wrap: wrap;*/
   height: 100%;
   width: 100%;
 }
 
-ui-view.left {
-  width: 50%;
-}
-.menu {
+.main-container {
   height: 100%;
-  width: 50%;
 }
 
-.right {
-  background-color: #2fbcf7;
-  display: flex;
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-.logos {
-  margin-bottom: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.target-example {
-  /*background: url("/assets/images/i-6@3x.png") center center no-repeat;
-  background-size: contain;*/
-  text-align: center;
-}
-
-.target-example-photo {
-  width: 40%;
-  min-width: 400px;
-}
-
-.app-store {
- /* background: url("/assets/images/group-25@3x.png") center center no-repeat;
-  background-size: contain;*/
-  flex-grow: 2;
-  text-align: center;
-}
-
-.app-store-logo {
-  width: 16%;
-  text-align: center;
-  min-width: 200px;
-}
-
-.facebook-twitter {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.twitter {
-  text-align: start;
-  flex: auto;
-}
-
-.twitter-logo {
-  margin-left: 3%;
-}
-
-.facebook {
-  text-align: end;
-  flex: auto;
-}
-
-.facebook-logo {
-  margin-right: 3%;
-}
-
-.bottom-logo {
-  width: 7%;
-  min-width: 35px;
-}
-
-@media screen and (max-width: 850px) {
-  .right {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  .target-example-photo {
-    min-width: 250px;
-  }
-}
+@import "app/layout/landing";
+@import "app/sign_in/sign_in";
+@import "app/sign_up/sign_up";

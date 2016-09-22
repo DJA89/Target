@@ -1,7 +1,11 @@
 {
   "dependencies": {
     "angular": "^1.5.0",
-    "angular-ui-router": "1.0.0-beta.1"
+    "angular-local-storage": "^0.5.0",
+    "angular-messages": "^1.5.8",
+    "angular-ui-router": "1.0.0-beta.1",
+    "angular-validation-match": "^1.9.0",
+    "babel-plugin-transform-strict-mode": "^6.11.3"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0-beta.2",

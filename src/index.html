@@ -8,23 +8,10 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
   </head>
-
   <body ng-app="app">
     <div class="app-container">
-      <ui-view class="left">
-        <aside class="menu"></aside>
-      </ui-view>
-
-      <aside class="right">
-        <section class="logos">
-          <div class="target-example"> <img class="target-example-photo" src="/assets/images/i-6@3x.png" alt="Target app example" /></div>
-          <div class="app-store"> <img class="app-store-logo" src="/assets/images/appstore-button@3x.png" alt="App store"/></div>
-          <div class="facebook-twitter">
-            <div class="facebook" ><img class="facebook-logo bottom-logo" src="/assets/images/facebook@3x.png" class="facebook-logo" alt="Facebook"/></div>
-            <div class="twitter" ><img class="twitter-logo bottom-logo" src="/assets/images/twitter@3x.png" alt="Twitter"/></div>
-          </div>
-        </section>
-      </aside>
+      <div ui-view class="main-container">
+      </div>
     </div>
   </body>
 </html>

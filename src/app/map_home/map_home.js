@@ -1,0 +1,5 @@
+class MapHomeCtrl {
+
+}
+
+export { MapHomeCtrl}

@@ -1,0 +1,36 @@
+<section class="sign_up">
+  <h1 class="sign-up-header">sign up</h1>
+  <div class="form-container">
+    <form name="signUpForm" ng-submit="signUpForm.$valid && signUpCtrl.createUser()" novalidate>
+      <label for="name" class="form-label" ng-hide="(signUpForm.$submitted || signUpForm.name.$touched) && signUpForm.name.$error.required">name</label>
+      <label for="name" class="form-label error" ng-show="(signUpForm.$submitted || signUpForm.name.$touched) && signUpForm.name.$error.required">name is required</label>
+      <input class="sign-up-input" type="text" name="name" ng-model="signUpCtrl.user.name" required/>
+      <label for="email" class="email-label form-label" ng-hide="(signUpForm.$submitted || signUpForm.email.$touched) && (signUpForm.email.$error.required || signUpForm.email.$error.email)">email</label>
+      <label for="email" class="email-label error form-label" ng-show="(signUpForm.$submitted || signUpForm.email.$touched) && signUpForm.email.$error.required">email is required</label>
+      <label for="email" class="email-label error form-label" ng-show="(signUpForm.$submitted || signUpForm.email.$touched) && signUpForm.email.$error.email">email is invalid</label>
+      <input class="sign-up-input" type="email" name="email" ng-model="signUpCtrl.user.email" overwrite-email required/>
+      <label for="password" class="form-label" ng-hide="(signUpForm.$submitted || signUpForm.password.$touched) && (signUpForm.password.$error.required || signUpForm.password.$error.minlength)">password</label>
+      <label for="password" class="form-label error" ng-show="(signUpForm.$submitted || signUpForm.password.$touched) && signUpForm.password.$error.required">password is required</label>
+      <label for="password" class="form-label error" ng-show="(signUpForm.$submitted || signUpForm.password.$touched) && signUpForm.password.$error.minlength">password must be at least 8 characters long</label>
+      <input class="sign-up-input" type="password" name="password" placeholder="MIN. 8 CHARACTERS LONG" ng-model="signUpCtrl.user.password" ng-minlength="8" required/>
+      <label for="passwordConfirmation" class="form-label" ng-hide="(signUpForm.$submitted || signUpForm.passwordConfirmation.$touched) && signUpForm.passwordConfirmation.$error.match && signUpForm.password.$valid">password confirmation</label>
+      <label for="passwordConfirmation" class="form-label error" ng-show="(signUpForm.$submitted || signUpForm.passwordConfirmation.$touched) && signUpForm.passwordConfirmation.$error.match && signUpForm.password.$valid">password and confirmation don't match</label>
+      <input class="sign-up-input" type="password" name="passwordConfirmation" name="password_confirmation" ng-model="signUpCtrl.user.password_confirmation" match="signUpCtrl.user.password" required/>
+      <label for="gender" class="form-label" ng-hide="(signUpForm.$submitted || signUpForm.gender.$touched) && signUpForm.gender.$error.required">gender</label>
+      <label for="gender" class="form-label error" ng-show="(signUpForm.$submitted || signUpForm.gender.$touched) && signUpForm.gender.$error.required">gender is required</label>
+      <select class="sign-up-input sign-up-select" name="gender" ng-model="signUpCtrl.user.gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input class="sign-up-button" type="submit" value="Sign up" />
+      <div ng-show="signUpForm.$submitted">
+        <div class="form-label error" ng-show="signUpCtrl.badRequest">Something went wrong.</div>
+      </div>
+    </form>
+    <div class="line"></div>
+    <div class="options">
+      <h4 class="sign-in-link"><a href="/">Sign in</a></h4>
+    </div>
+  </div>
+</section>
