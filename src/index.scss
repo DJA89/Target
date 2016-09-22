@@ -10,10 +10,6 @@ body {
   display: flex;
 }
 
-.menu {
-
-}
-
 /*.right {
   width: 50%;
   height: 100%;
@@ -31,7 +27,8 @@ body {
 }
 
 .target-example {
-  width: 40%;
+  width: 31.86458333333342rem;
+  height: 65.2864583333335
   margin: auto;
   order: 1;
 }
@@ -69,26 +66,24 @@ body {
   width: 100%;
 }
 
-ui-view.left {
+.left {
   width: 50%;
-}
-.menu {
-  height: 100%;
-  width: 50%;
+  background-color: white;
+  text-align: center;
 }
 
 .right {
   background-color: #2fbcf7;
-  display: flex;
   height: 100%;
   width: 50%;
   position: fixed;
   top: 0;
   right: 0;
+  overflow: scroll;
+  overflow: overlay;
 }
 
 .logos {
-  margin-bottom: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,8 +97,9 @@ ui-view.left {
 }
 
 .target-example-photo {
-  width: 40%;
-  min-width: 400px;
+  width: 48%;
+  min-width: 320px;
+  max-height: 800px;
 }
 
 .app-store {
@@ -111,53 +107,49 @@ ui-view.left {
   background-size: contain;*/
   flex-grow: 2;
   text-align: center;
+  vertical-align: middle;
+  max-height: 51px;
 }
 
 .app-store-logo {
-  width: 16%;
+  width: 18%;
   text-align: center;
-  min-width: 200px;
+  min-width: 118.5px;
 }
 
 .facebook-twitter {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+  flex-grow: 1;
 }
 
-.twitter {
-  text-align: start;
-  flex: auto;
-}
+.twitter { text-align: start; }
 
-.twitter-logo {
-  margin-left: 3%;
-}
+.twitter-logo { margin-left: 1rem; }
 
-.facebook {
-  text-align: end;
-  flex: auto;
-}
+.facebook { text-align: end; }
 
-.facebook-logo {
-  margin-right: 3%;
-}
+.facebook-logo { margin-right: 1rem; }
 
 .bottom-logo {
-  width: 7%;
-  min-width: 35px;
+  padding-top: 1rem;
+  width: 4%;
+  max-height: 45px;
+  min-width: 25px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 840px) {
   .right {
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
   }
 
-  .target-example-photo {
-    min-width: 250px;
+  .left {
+    width: 100%;
   }
 }
+
+@import "app/sign_in/sign_in";
+@import "app/sign_up/sign_up";

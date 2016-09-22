@@ -1,0 +1,26 @@
+<section class="sign_up">
+  <h1 class="sign-up-header">sign up</h1>
+  <div class="form-container">
+    <form name="signUpForm" ng-submit="signUpForm.$valid && signUpCtrl.createUser()" novalidate>
+      <label for="name">name</label>
+      <input class="sign-up-input" type="text" id="username" ng-model="signUpCtrl.user.name" required/>
+      <label for="email">email</label>
+      <input class="sign-up-input" type="email" id="email" ng-model="signUpCtrl.user.email" required/>
+      <label for="password">password</label>
+      <input class="sign-up-input" type="password" id="password" placeholder="MIN. 8 CHARACTERS LONG" ng-model="signUpCtrl.user.password" ng-minlength="8" required/>
+      <label for="password_confirmation">password confirmation</label>
+      <input class="sign-up-input" type="password" name="passwordConfirmation" id="password_confirmation" ng-model="signUpCtrl.user.password_confirmation" match="signUpCtrl.user.password" required/>
+      <label for="gender">gender</label>
+      <select id="gender" ng-model="signUpCtrl.user.gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input class="sign-up-button" type="submit" value="Sign up" />
+    </form>
+    <div class="line"></div>
+    <div class="options">
+      <h4 class="sign-in-link"><a href="/">Sign in</a></h4>
+    </div>
+  </div>
+</section>

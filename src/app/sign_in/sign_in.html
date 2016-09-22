@@ -1,0 +1,21 @@
+<section>
+  <div class="friends"></div>
+  <h1 class="title">TARGET MVD</h1>
+  <h2 class="slogan">Find people near you &amp; Connect</h2>
+  <p class="main-text"> Create a target wherever on the map, specify your interest: Travel, Dating, Music, etc and start connecting with others who share your interest.</p>
+  <div class="form-container">
+    <form name="signInForm" ng-submit="signInForm.$valid && SignInCtrl.logInUser()">
+      <label for="email" class="email-label">email</label>
+      <input type="email" id="email" ng-model="SignInCtrl.user.email" class="sign-in-input"/>
+      <label for="password">password</label>
+      <input type="password" id="password" ng-model="SignInCtrl.user.password" class="sign-in-input"/>
+      <input type="submit" value="Sign in" class="sign-in" />
+      <p class="forgot-password"><a href="#">Forgot your password?</a></p>
+    </form>
+    <div class="options">
+      <h3><a class="connect-with-facebook" herf="#">CONNECT WITH FACEBOOK</a></h3>
+      <div class="line"></div>
+      <h4 class="sign-up"><a href="/sign_up">Sign up</a></h4>
+    </div>
+  </div>
+</section>
